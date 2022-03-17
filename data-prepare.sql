@@ -6,7 +6,8 @@ dataInt int not null
 )
 
 select * from SolarData
-­
+
+
 --Insert data
 INSERT INTO SolarData 
 SELECT 1900 AS 'yearId','0x04bd8' AS 'data',19416 AS 'dataInt' 
@@ -88,7 +89,6 @@ UNION ALL SELECT 2048,'0x06d20',27936 UNION ALL SELECT 2049,'0x0ada0',44448
 
 
 
-­
 --Call method
 select dbo.fn_GetLunar(getdate())  
 
