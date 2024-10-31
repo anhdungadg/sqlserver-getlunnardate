@@ -50,7 +50,7 @@ SELECT [dbo].[fn_GetLunar]('2024-01-01');
 
 -- Result:
 -- Returns the corresponding Lunar date as a DATETIME.
-
+```
 
 ## Limitations
 The function supports dates from 1900 to 2050 only.
