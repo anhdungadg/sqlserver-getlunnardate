@@ -37,4 +37,23 @@ The function follows these steps:
 
 ## Dependencies
 
-The function relies on a table called `SolarData`, wh
+The function relies on a table called `SolarData`, which contains year-specific lunar data:
+- **Columns in SolarData**:
+  - `yearId` (`INT`): The Gregorian year.
+  - `dataInt` (`INT`): Encoded integer that provides information on lunar months and leap months.
+
+## Examples
+
+```sql
+-- Calculate the Lunar date for January 1, 2024
+SELECT [dbo].[fn_GetLunar]('2024-01-01');
+
+-- Result:
+-- Returns the corresponding Lunar date as a DATETIME.
+
+
+## Limitations
+The function supports dates from 1900 to 2050 only.
+Accurate Lunar date conversion requires an accurate SolarData table.
+Returns DATETIME with both date and time components, though only the date is relevant.
+
